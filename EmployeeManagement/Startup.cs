@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using EmployeeManagement.Models;
 using EmployeeManagement.Security;
 using Microsoft.AspNetCore.Authentication;
@@ -15,7 +12,6 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace EmployeeManagement
 {
@@ -67,8 +63,8 @@ namespace EmployeeManagement
             services.AddAuthentication()
                 .AddGoogle("Google", o =>
                 {
-                    o.ClientId = "117633894243-ha1gffje1q0327jl13rvh8k0pb0k2lnj.apps.googleusercontent.com";
-                    o.ClientSecret = "cr1v1CPIsNfuebO3P_kLVfh1";
+                    o.ClientId = "t1176e33894s243t-ha1gffje1q0327jl13rvh8k0pb0k2lnj.apps.googleusercontent.com";
+                    o.ClientSecret = "testcr1v1CPIsNfuebO3P_kLVfh1";
                     o.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v2/userinfo";
                     o.ClaimActions.Clear();
                     o.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "id");
@@ -81,13 +77,13 @@ namespace EmployeeManagement
                 })
                 .AddFacebook(options =>
                 {
-                    options.AppId = "738226383516028";
-                    options.AppSecret = "a04683e6fb42a43ba727a9e0012e1cdb";
+                    options.AppId = "t738e226s383t516028";
+                    options.AppSecret = "testa04683e6fb42a43ba727a9e0012e1cdb";
                 });
 
             //.AddGoogle(options =>
             //{
-            //    options.ClientId = "117633894243-ha1gffje1q0327jl13rvh8k0pb0k2lnj.apps.googleusercontent.com";
+            //    options.ClientId = "t1176e33894s243t-ha1gffje1q0327jl13rvh8k0pb0k2lnj.apps.googleusercontent.com";
             //    options.ClientSecret = "cr1v1CPIsNfuebO3P_kLVfh1";
             //    options.UserInformationEndpoint = "https://www.googleapis.com/oauth2/v2/userinfo";
             //});
